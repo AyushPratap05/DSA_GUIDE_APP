@@ -1,0 +1,18 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Public data: DSA Topics (read-only for everyone)
+    // Collection path: /artifacts/{appId}/public/data/dsaTopics/{topicId}
+    match /artifacts/{appId}/public/data/dsaTopics/{topicId} {
+      allow read: if true; // Anyone can read public DSA topics
+      allow write: if false; // No one can write to public topics from client-side
+    }
+
+    // Private user progress: only readable/writable by the authenticated user
+    // Collection path: /artifacts/{appId}/users/{userId}/progress/{progressDocId}
+    match /artifacts/{appId}/users/{userId}/progress/{progressDocId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+  }
+}

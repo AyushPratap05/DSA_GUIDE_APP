@@ -1,0 +1,179 @@
+{
+  "arrays": {
+    "title": "Arrays",
+    "why": "The most basic and fundamental linear data structure. Mastering array manipulation is crucial for almost all other DSA topics and common interview questions.",
+    "focus": "Traversal, searching (linear, binary), sorting (basic algorithms), insertion, deletion, understanding fixed vs. dynamic size, contiguous memory.",
+    "order": 0,
+    "phase": "Phase 1: Core Building Blocks & Techniques",
+    "companies": ["Google", "Amazon", "Microsoft", "Meta", "Apple", "Netflix"],
+    "problems": [
+      { "title": "Two Sum", "link": "https://leetcode.com/problems/two-sum/" },
+      { "title": "Max Subarray Sum", "link": "https://leetcode.com/problems/maximum-subarray/" },
+      { "title": "Rotate Array", "link": "https://leetcode.com/problems/rotate-array/" },
+      { "title": "Contains Duplicate", "link": "https://leetcode.com/problems/contains-duplicate/" }
+    ]
+  },
+  "two-pointer-sliding-window": {
+    "title": "Two Pointer & Sliding Window",
+    "why": "Powerful techniques for arrays and strings that optimize solutions from O(N^2) to O(N), often used for problems involving subarrays, substrings, or pairs.",
+    "focus": "When to use two pointers, fixed-size vs. variable-size sliding windows, maintaining window state.",
+    "order": 1,
+    "phase": "Phase 1: Core Building Blocks & Techniques",
+    "companies": ["Google", "Amazon", "Microsoft", "Meta", "Netflix"],
+    "problems": [
+      { "title": "Longest Substring Without Repeating Characters", "link": "https://leetcode.com/problems/longest-substring-without-repeating-characters/" },
+      { "title": "Container With Most Water", "link": "https://leetcode.com/problems/container-with-most-water/" },
+      { "title": "Minimum Window Substring", "link": "https://leetcode.com/problems/minimum-window-substring/" }
+    ]
+  },
+  "binary-search": {
+    "title": "Binary Search",
+    "why": "An efficient algorithm for finding an item from a sorted list of items. It's a key technique for many problems on sorted arrays, matrices, and even on answers.",
+    "focus": "Sorted data, iterative vs. recursive implementation, handling duplicates, finding first/last occurrence, 'search space' reduction.",
+    "order": 2,
+    "phase": "Phase 1: Core Building Blocks & Techniques",
+    "companies": ["Google", "Amazon", "Microsoft", "Meta", "Apple"],
+    "problems": [
+      { "title": "Binary Search", "link": "https://leetcode.com/problems/binary-search/" },
+      { "title": "Search in Rotated Sorted Array", "link": "https://leetcode.com/problems/search-in-rotated-sorted-array/" },
+      { "title": "Find Peak Element", "link": "https://leetcode.com/problems/find-peak-element/" }
+    ]
+  },
+  "recursion": {
+    "title": "Recursion",
+    "why": "A fundamental programming paradigm and a prerequisite for understanding Trees, Graphs, and Dynamic Programming. You'll use it extensively for problems with self-similar subproblems.",
+    "focus": "Base cases, recursive calls, understanding the call stack, backtracking, memoization (introduction).",
+    "order": 3,
+    "phase": "Phase 1: Core Building Blocks & Techniques",
+    "companies": ["Google", "Amazon", "Microsoft", "Meta", "Uber"],
+    "problems": [
+      { "title": "Factorial of a number", "link": "https://leetcode.com/problems/factorial-trailing-zeroes/" },
+      { "title": "Fibonacci Number", "link": "https://leetcode.com/problems/fibonacci-number/" },
+      { "title": "Permutations", "link": "https://leetcode.com/problems/permutations/" },
+      { "title": "N-Queens", "link": "https://leetcode.com/problems/n-queens/" }
+    ]
+  },
+  "linked-list": {
+    "title": "Linked List",
+    "why": "A fundamental linear data structure. Many problems involve manipulating pointers and can be solved iteratively or recursively. Essential for understanding other structures like stacks and queues.",
+    "focus": "Traversal, insertion, deletion, reversing, finding middle, cycle detection (Floyd's Tortoise and Hare), merging.",
+    "order": 4,
+    "phase": "Phase 1: Core Building Blocks & Techniques",
+    "companies": ["Amazon", "Microsoft", "Google", "Meta"],
+    "problems": [
+      { "title": "Reverse a Linked List", "link": "https://leetcode.com/problems/reverse-linked-list/" },
+      { "title": "Detect Cycle in Linked List", "link": "https://leetcode.com/problems/linked-list-cycle/" },
+      { "title": "Merge Two Sorted Lists", "link": "https://leetcode.com/problems/merge-two-sorted-lists/" },
+      { "title": "Remove Nth Node From End of List", "link": "https://leetcode.com/problems/remove-nth-node-from-end-of-list/" }
+    ]
+  },
+  "stack-queue": {
+    "title": "Stack & Queue",
+    "why": "Basic Abstract Data Types (ADTs) crucial for many algorithms (e.g., BFS, DFS, expression evaluation, managing function calls).",
+    "focus": "LIFO (Stack), FIFO (Queue), common applications like balancing parentheses, monotonic stack/queue, using them for graph traversals.",
+    "order": 5,
+    "phase": "Phase 1: Core Building Blocks & Techniques",
+    "companies": ["Google", "Amazon", "Microsoft", "Meta"],
+    "problems": [
+      { "title": "Valid Parentheses", "link": "https://leetcode.com/problems/valid-parentheses/" },
+      { "title": "Implement Queue using Stacks", "link": "https://leetcode.com/problems/implement-queue-using-stacks/" },
+      { "title": "Next Greater Element I", "link": "https://leetcode.com/problems/next-greater-element-i/" },
+      { "title": "Rotting Oranges (BFS)", "link": "https://leetcode.com/problems/rotting-oranges/" }
+    ]
+  },
+  "string": {
+    "title": "String",
+    "why": "Many string problems leverage techniques from Arrays, Two Pointers, and sometimes even recursion or specialized data structures like Tries. Common in interviews.",
+    "focus": "Palindromes, anagrams, string matching (KMP, Rabin-Karp - advanced), character frequency, substrings, string manipulation.",
+    "order": 6,
+    "phase": "Phase 1: Core Building Blocks & Techniques",
+    "companies": ["Google", "Amazon", "Microsoft", "Meta", "Apple"],
+    "problems": [
+      { "title": "Longest Palindromic Substring", "link": "https://leetcode.com/problems/longest-palindromic-substring/" },
+      { "title": "Group Anagrams", "link": "https://leetcode.com/problems/group-anagrams/" },
+      { "title": "Valid Anagram", "link": "https://leetcode.com/problems/valid-anagram/" },
+      { "title": "String to Integer (atoi)", "link": "https://leetcode.com/problems/string-to-integer-atoi/" }
+    ]
+  },
+  "tree": {
+    "title": "Tree",
+    "why": "Hierarchical data structures that heavily rely on recursion (DFS) and queues (BFS). Fundamental for understanding more complex structures and algorithms.",
+    "focus": "Traversals (Inorder, Preorder, Postorder, Level Order), properties (height, diameter), Binary Search Trees (BSTs), balanced trees (AVL, Red-Black - conceptual understanding).",
+    "order": 7,
+    "phase": "Phase 2: Advanced Data Structures",
+    "companies": ["Google", "Amazon", "Microsoft", "Meta", "Apple"],
+    "problems": [
+      { "title": "Maximum Depth of Binary Tree", "link": "https://leetcode.com/problems/maximum-depth-of-binary-tree/" },
+      { "title": "Validate Binary Search Tree", "link": "https://leetcode.com/problems/validate-binary-search-tree/" },
+      { "title": "Binary Tree Level Order Traversal", "link": "https://leetcode.com/problems/binary-tree-level-order-traversal/" },
+      { "title": "Invert Binary Tree", "link": "https://leetcode.com/problems/invert-binary-tree/" }
+    ]
+  },
+  "heap": {
+    "title": "Heap (Priority Queue)",
+    "why": "Specialized tree-based data structures essential for optimization problems and certain graph algorithms.",
+    "focus": "Min-heap, Max-heap, insertion, deletion, heapify, kth largest/smallest problems.",
+    "order": 8,
+    "phase": "Phase 2: Advanced Data Structures",
+    "companies": ["Google", "Amazon", "Microsoft", "Meta", "Bloomberg"],
+    "problems": [
+      { "title": "Kth Largest Element in an Array", "link": "https://leetcode.com/problems/kth-largest-element-in-an-array/" },
+      { "title": "Top K Frequent Elements", "link": "https://leetcode.com/problems/top-k-frequent-elements/" },
+      { "title": "Find Median from Data Stream", "link": "https://leetcode.com/problems/find-median-from-data-stream/" }
+    ]
+  },
+  "graph": {
+    "title": "Graph",
+    "why": "The most generalized data structure, building on BFS, DFS, and heaps. Used to model relationships between entities.",
+    "focus": "Representations (adjacency list/matrix), BFS, DFS, topological sort, shortest path algorithms (Dijkstra, Bellman-Ford - conceptual), Minimum Spanning Trees (Prim, Kruskal - conceptual), Disjoint Set Union (DSU).",
+    "order": 9,
+    "phase": "Phase 3: Complex Algorithms & Specialized Structures",
+    "companies": ["Google", "Amazon", "Microsoft", "Meta", "Uber", "Lyft"],
+    "problems": [
+      { "title": "Number of Islands", "link": "https://leetcode.com/problems/number-of-islands/" },
+      { "title": "Clone Graph", "link": "https://leetcode.com/problems/clone-graph/" },
+      { "title": "Course Schedule", "link": "https://leetcode.com/problems/course-schedule/" },
+      { "title": "Pacific Atlantic Water Flow", "link": "https://leetcode.com/problems/pacific-atlantic-water-flow/" }
+    ]
+  },
+  "bit-manipulation": {
+    "title": "Bit Manipulation",
+    "why": "A niche but powerful topic for optimizing solutions, especially in competitive programming and low-level systems. Shows deep understanding of numbers.",
+    "focus": "Bitwise operators (AND, OR, XOR, NOT, shifts), checking/setting/clearing bits, counting set bits, properties of XOR.",
+    "order": 10,
+    "phase": "Phase 3: Complex Algorithms & Specialized Structures",
+    "companies": ["Google", "Microsoft", "Bloomberg"],
+    "problems": [
+      { "title": "Counting Bits", "link": "https://leetcode.com/problems/counting-bits/" },
+      { "title": "Single Number", "link": "https://leetcode.com/problems/single-number/" },
+      { "title": "Reverse Bits", "link": "https://leetcode.com/problems/reverse-bits/" }
+    ]
+  },
+  "trie": {
+    "title": "Trie",
+    "why": "A specialized tree-like structure for efficient retrieval of keys in a dataset of strings. Excellent for problems involving prefixes, autocomplete, and spell checkers.",
+    "focus": "Insertion, search, prefix search, nodes representing characters, children pointers.",
+    "order": 11,
+    "phase": "Phase 3: Complex Algorithms & Specialized Structures",
+    "companies": ["Google", "Microsoft", "Amazon"],
+    "problems": [
+      { "title": "Implement Trie (Prefix Tree)", "link": "https://leetcode.com/problems/implement-trie-prefix-tree/" },
+      { "title": "Word Search II", "link": "https://leetcode.com/problems/word-search-ii/" },
+      { "title": "Add and Search Word - Data structure design", "link": "https://leetcode.com/problems/add-and-search-word-data-structure-design/" }
+    ]
+  },
+  "dynamic-programming": {
+    "title": "Dynamic Programming (DP)",
+    "why": "Often considered the most challenging topic, it's a culmination of many problem-solving skills. Essential for optimizing problems with overlapping subproblems and optimal substructure.",
+    "focus": "Memoization (top-down), Tabulation (bottom-up), recognizing DP patterns (0/1 Knapsack, unbounded knapsack, longest common subsequence, shortest path on DAGs).",
+    "order": 12,
+    "phase": "Phase 4: The Grand Finale",
+    "companies": ["Google", "Amazon", "Microsoft", "Meta", "Netflix", "All FAANG"],
+    "problems": [
+      { "title": "Climbing Stairs", "link": "https://leetcode.com/problems/climbing-stairs/" },
+      { "title": "Coin Change", "link": "https://leetcode.com/problems/coin-change/" },
+      { "title": "Longest Increasing Subsequence", "link": "https://leetcode.com/problems/longest-increasing-subsequence/" },
+      { "title": "House Robber", "link": "https://leetcode.com/problems/house-robber/" }
+    ]
+  }
+}

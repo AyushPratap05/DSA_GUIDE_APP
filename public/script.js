@@ -143,55 +143,39 @@ document.addEventListener('authReady', async () => {
     }
 
     // --- Gemini API Call Functions ---
-    async function askGeminiForConceptExplanation(question, topicTitle) {
-        const prompt = `Explain the DSA concept "${question}" in the context of "${topicTitle}" in a concise and easy-to-understand manner. Provide a brief overview and its relevance.`;
-        let chatHistory = [{ role: "user", parts: [{ text: prompt }] }];
-        const payload = { contents: chatHistory };
+    async function queryGemini(prompt) {
+    let chatHistory = [{ role: "user", parts: [{ text: prompt }] }];
+    const payload = { contents: chatHistory };
 
-        try {
-            const result = await fetchWithExponentialBackoff(GEMINI_API_URL, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(payload)
-            });
+    try {
+        const result = await fetchWithExponentialBackoff(GEMINI_API_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+        });
 
-            if (result.candidates && result.candidates.length > 0 &&
-                result.candidates[0].content && result.candidates[0].content.parts &&
-                result.candidates[0].content.parts.length > 0) {
-                return result.candidates[0].content.parts[0].text;
-            } else {
-                throw new Error("Invalid response structure from Gemini API for concept explanation.");
-            }
-        } catch (error) {
-            console.error("Error asking Gemini for concept explanation:", error);
-            return "Sorry, I couldn't get an explanation right now. Please try again later.";
+        if (result.candidates && result.candidates.length > 0 &&
+            result.candidates[0].content && result.candidates[0].content.parts &&
+            result.candidates[0].content.parts.length > 0) {
+            return result.candidates[0].content.parts[0].text;
+        } else {
+            throw new Error("Invalid response structure from Gemini API.");
         }
+    } catch (error) {
+        console.error("Error querying Gemini:", error);
+        return "Sorry, I couldn't get a response right now. Please try again later.";
     }
+}
 
-    async function getGeminiProblemHint(problemTitle, topicTitle) {
-        const prompt = `Give a small, conceptual hint for the DSA problem "${problemTitle}" which is related to the topic "${topicTitle}". Do NOT provide the full solution or code. Focus on the core idea or a small step to get started.`;
-        let chatHistory = [{ role: "user", parts: [{ text: prompt }] }];
-        const payload = { contents: chatHistory };
+async function askGeminiForConceptExplanation(question, topicTitle) {
+    const prompt = `Explain the DSA concept "${question}" in the context of "${topicTitle}" in a concise and easy-to-understand manner. Provide a brief overview and its relevance.`;
+    return await queryGemini(prompt);
+}
 
-        try {
-            const result = await fetchWithExponentialBackoff(GEMINI_API_URL, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(payload)
-            });
-
-            if (result.candidates && result.candidates.length > 0 &&
-                result.candidates[0].content && result.candidates[0].content.parts &&
-                result.candidates[0].content.parts.length > 0) {
-                return result.candidates[0].content.parts[0].text;
-            } else {
-                throw new Error("Invalid response structure from Gemini API for problem hint.");
-            }
-        } catch (error) {
-            console.error("Error getting Gemini problem hint:", error);
-            return "Sorry, I couldn't generate a hint right now. Please try again later.";
-        }
-    }
+async function getGeminiProblemHint(problemTitle, topicTitle) {
+    const prompt = `Give a small, conceptual hint for the DSA problem "${problemTitle}" which is related to the topic "${topicTitle}". Do NOT provide the full solution or code. Focus on the core idea or a small step to get started.`;
+    return await queryGemini(prompt);
+}
 
     // --- Fetch DSA Topics from Firestore ---
     async function fetchDsaTopics() {
